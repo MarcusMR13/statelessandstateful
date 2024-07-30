@@ -66,24 +66,36 @@ class _TaskState extends State<Task> {
           child: Stack(
             children: [
               Container(
-                color: Colors.blue,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: Colors.blue,
+                ),
                 height: 140,
               ),
               Column(
                 children: [
                   Container(
-                    color: Colors.white,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: Colors.white,
+                    ),
                     height: 100,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          color: Colors.black26,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Colors.black26,
+                          ),
                           width: 72,
                           height: 100,
-                          child: Image.network(
-                            widget.foto,
-                            fit: BoxFit.cover,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: Image.network(
+                              widget.foto,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                         Column(
@@ -102,27 +114,37 @@ class _TaskState extends State<Task> {
                                 Icon(
                                   Icons.star,
                                   size: 15,
-                                  color: (widget.dificuldade>=1) ? Colors.blue : Colors.blue[100],
+                                  color: (widget.dificuldade >= 1)
+                                      ? Colors.blue
+                                      : Colors.blue[100],
                                 ),
                                 Icon(
                                   Icons.star,
                                   size: 15,
-                                  color: (widget.dificuldade>=2) ? Colors.blue : Colors.blue[100],
+                                  color: (widget.dificuldade >= 2)
+                                      ? Colors.blue
+                                      : Colors.blue[100],
                                 ),
                                 Icon(
                                   Icons.star,
                                   size: 15,
-                                  color: (widget.dificuldade>=3) ? Colors.blue : Colors.blue[100],
+                                  color: (widget.dificuldade >= 3)
+                                      ? Colors.blue
+                                      : Colors.blue[100],
                                 ),
                                 Icon(
                                   Icons.star,
                                   size: 15,
-                                  color: (widget.dificuldade>=4) ? Colors.blue : Colors.blue[100],
+                                  color: (widget.dificuldade >= 4)
+                                      ? Colors.blue
+                                      : Colors.blue[100],
                                 ),
                                 Icon(
                                   Icons.star,
                                   size: 15,
-                                  color: (widget.dificuldade>=5) ? Colors.blue : Colors.blue[100],
+                                  color: (widget.dificuldade >= 5)
+                                      ? Colors.blue
+                                      : Colors.blue[100],
                                 ),
                               ],
                             )
@@ -165,8 +187,9 @@ class _TaskState extends State<Task> {
                           width: 200,
                           child: LinearProgressIndicator(
                             color: Colors.black,
-                            value: (widget.dificuldade > 0 ) ?
-                            (nivel/widget.dificuldade) / 10 : 1,
+                            value: (widget.dificuldade > 0)
+                                ? (nivel / widget.dificuldade) / 10
+                                : 1,
                           ),
                         ),
                       ),
