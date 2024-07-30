@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statelessandstateful/initial_screen.dart';
+import 'package:statelessandstateful/screens/initial_screen.dart';
 
 void main() {
   runApp(MyApp());
