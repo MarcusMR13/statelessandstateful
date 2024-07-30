@@ -38,6 +38,7 @@ class _InitialscreenState extends State<Initialscreen> {
               "assets/images/clown.jpg",
               5,
             ),
+            SizedBox(height: 100,),
           ],
         ),
       ),
