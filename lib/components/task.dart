@@ -47,7 +47,7 @@ class _TaskState extends State<Task> {
                           height: 100,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(4),
-                            child: Image.network(
+                            child: Image.asset(
                               widget.photo,
                               fit: BoxFit.cover,
                             ),
@@ -113,7 +113,7 @@ class _TaskState extends State<Task> {
                       Padding(
                         padding: const EdgeInsets.all(12),
                         child: Text(
-                          'Nivel: $level',
+                          'Level: $level',
                           style: const TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),

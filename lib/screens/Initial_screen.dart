@@ -26,16 +26,16 @@ class _InitialscreenState extends State<Initialscreen> {
           children: const [
              Task(
               "Play with Myers",
-              "https://conteudo.imguol.com.br/c/entretenimento/e9/2018/10/18/michael-myers-cada-vez-mais-assustador-no-novo-halloween-1539891706130_v2_900x506.jpg",
+              "assets/images/myers.jpg",
               5,
             ),
              Task(
                 "Play with Artist",
-                "https://preview.redd.it/vqb3n4gcejn91.jpg?width=1200&format=pjpg&auto=webp&s=9a3af0be055a735557b3830d66d439c93e8e73fa",
+                "assets/images/artist.jpg",
                 4),
              Task(
               "Play with Clown",
-              "https://img3.pillowfort.social/posts/66e93f1d1f40a7a3bd98_small.jpeg",
+              "assets/images/clown.jpg",
               5,
             ),
           ],
