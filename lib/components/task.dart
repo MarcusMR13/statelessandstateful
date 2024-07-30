@@ -18,8 +18,7 @@ class _TaskState extends State<Task> {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: Stack(
+        child:Stack(
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -58,17 +57,17 @@ class _TaskState extends State<Task> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                            SizedBox(
                               width: 200,
                               child: Text(widget.name,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 18,
                                       overflow: TextOverflow.fade)),
                             ),
                             Difficulty(difficultyLevel: widget.difficulty),
                           ],
                         ),
-                        Container(
+                        SizedBox(
                           height: 65,
                           width: 65,
                           child: ElevatedButton(
@@ -80,13 +79,13 @@ class _TaskState extends State<Task> {
                                   level++;
                                 });
                               },
-                              child: Column(
+                              child: const Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Icon(Icons.arrow_drop_up_outlined),
-                                    Text(
+                                  children:[
+                                     Icon(Icons.arrow_drop_up_outlined),
+                                     Text(
                                       "UP",
                                       style: TextStyle(
                                           fontSize: 12, color: Colors.black),
@@ -101,7 +100,7 @@ class _TaskState extends State<Task> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
+                        child: SizedBox(
                           width: 200,
                           child: LinearProgressIndicator(
                             color: Colors.black,
@@ -114,8 +113,8 @@ class _TaskState extends State<Task> {
                       Padding(
                         padding: const EdgeInsets.all(12),
                         child: Text(
-                          'Nivel: ${level}',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
+                          'Nivel: $level',
+                          style: const TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),
                     ],
@@ -124,6 +123,6 @@ class _TaskState extends State<Task> {
               )
             ],
           ),
-        ));
+        );
   }
 }

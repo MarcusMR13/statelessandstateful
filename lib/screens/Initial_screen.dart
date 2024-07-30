@@ -16,7 +16,7 @@ class _InitialscreenState extends State<Initialscreen> {
       appBar: AppBar(
         leading: Container(),
         title: const Text(
-          'Tarefas',
+          'Tasks',
         ),
       ),
       body: AnimatedOpacity(
@@ -25,16 +25,16 @@ class _InitialscreenState extends State<Initialscreen> {
         child: ListView(
           children: const [
              Task(
-              "Jogar de Myers",
+              "Play with Myers",
               "https://conteudo.imguol.com.br/c/entretenimento/e9/2018/10/18/michael-myers-cada-vez-mais-assustador-no-novo-halloween-1539891706130_v2_900x506.jpg",
               5,
             ),
              Task(
-                "Jogar de Artista",
+                "Play with Artist",
                 "https://preview.redd.it/vqb3n4gcejn91.jpg?width=1200&format=pjpg&auto=webp&s=9a3af0be055a735557b3830d66d439c93e8e73fa",
                 4),
              Task(
-              "Jogar de Palhaço",
+              "Play with Clown",
               "https://img3.pillowfort.social/posts/66e93f1d1f40a7a3bd98_small.jpeg",
               5,
             ),
