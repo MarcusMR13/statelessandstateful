@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+  
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
+class _MyAppState extends State<MyApp> {
+  bool opacidade = true;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,23 +28,36 @@ class MyApp extends StatelessWidget {
             'Tarefas',
           ),
         ),
-        body: ListView(
-          children: [
-            Task(
-              "Jogar de Myers",
-              "https://conteudo.imguol.com.br/c/entretenimento/e9/2018/10/18/michael-myers-cada-vez-mais-assustador-no-novo-halloween-1539891706130_v2_900x506.jpg",
-              5,
-            ),
-            Task(
-                "Jogar de Artista",
-                "https://preview.redd.it/vqb3n4gcejn91.jpg?width=1200&format=pjpg&auto=webp&s=9a3af0be055a735557b3830d66d439c93e8e73fa",
-                4),
-            Task(
-              "Jogar de Palhaço",
-              "https://img3.pillowfort.social/posts/66e93f1d1f40a7a3bd98_small.jpeg",
-              3,
-            ),
-          ],
+        body: AnimatedOpacity(
+          opacity: opacidade ? 1 : 0,
+          duration: Duration(microseconds: 700),
+          child: ListView(
+            children: [
+              Task(
+                "Jogar de Myers",
+                "https://conteudo.imguol.com.br/c/entretenimento/e9/2018/10/18/michael-myers-cada-vez-mais-assustador-no-novo-halloween-1539891706130_v2_900x506.jpg",
+                5,
+              ),
+              Task(
+                  "Jogar de Artista",
+                  "https://preview.redd.it/vqb3n4gcejn91.jpg?width=1200&format=pjpg&auto=webp&s=9a3af0be055a735557b3830d66d439c93e8e73fa",
+                  4),
+              Task(
+                "Jogar de Palhaço",
+                "https://img3.pillowfort.social/posts/66e93f1d1f40a7a3bd98_small.jpeg",
+                3,
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.blue,
+          onPressed: () {
+            setState(() {
+              opacidade = !opacidade;
+            });
+          },
+          child: Icon(Icons.remove_red_eye),
         ),
       ),
     );
