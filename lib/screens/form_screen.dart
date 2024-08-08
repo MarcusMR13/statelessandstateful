@@ -20,7 +20,11 @@ class _FormScreenState extends State<FormScreen> {
       key: _formKey,
       child: Scaffold(
         appBar: AppBar(
-          leading: Container(
+          leading: FloatingActionButton(
+            backgroundColor: Colors.blue,
+            onPressed: () {
+              Navigator.pop(context);
+            },
             child: Icon(Icons.arrow_back),
           ),
           title: Text("New Task"),
@@ -124,14 +128,19 @@ class _FormScreenState extends State<FormScreen> {
                       ),
                     ),
                   ),
-                  ElevatedButton(
+                  FloatingActionButton(
+                    backgroundColor: Colors.blue,
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         print("${nameController.text}");
                         print("${int.parse(difficultyController.text)}");
                         print("${imageController.text}");
                         ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text("New Task Added"),),);
+                          const SnackBar(
+                            content: Text("New Task Added"),
+                          ),
+                        );
+                        Navigator.pop(context);
                       }
                       ;
                     },

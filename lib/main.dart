@@ -12,12 +12,17 @@ class MyApp extends StatelessWidget {
 @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/initialScreen',
+      routes: {
+        '/initialScreen': (context) => const Initialscreen(),
+        '/formScreen': (context) => const FormScreen(),
+      },
       title: 'Tasks',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(color: Colors.blue),
       ),
-      home: const FormScreen(),
+      home: const Initialscreen(),
     );
   }
 }

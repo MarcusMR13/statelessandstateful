@@ -70,10 +70,8 @@ class _TaskState extends State<Task> {
                         SizedBox(
                           height: 65,
                           width: 65,
-                          child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.blue,
-                              ),
+                          child: FloatingActionButton(
+                              backgroundColor: Colors.blue,
                               onPressed: () {
                                 setState(() {
                                   level++;
